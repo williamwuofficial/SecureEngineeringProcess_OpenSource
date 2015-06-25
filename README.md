@@ -19,22 +19,25 @@ The following guide will be focued towards secure development flow. For bug patc
 2. Bugzilla           (Issue Management)
 3. Sonar Qube         (Quality Control)
 
-## Issues to address
+## Issues to address adoption
 1. Scalability
 2. Ease of Integration
 
-** General Issues of Open Source **
-Open source requires management of people from a variety of skill sets and timezones. 
+__General Issues of Open Source__
+
+Open source requires management of people from a variety of skill sets and timezones. Therefore, the main issues to adoption of security processes are scability and ease of adoption. Considering this, training and manual testing procedures are difficult to implement for an open source project. A CI (Continuous Integration) server such as jenkins would be able to perform code analysis via vulnerability scanners. 
 
 ## Proposed Solution
 1. Dependency Management
     
   The current proposed tool is OWASP_dependency_check, that has both a maven and jenkins plugin. Furthermore, the tool checks for vulnerable software against data from the NVD (National Vulnerability Database). In order to address False Positives, an xml file can be included to supress results in a scan. 
+
 2. Static Code Analysis
     
-  The tool find-sec-bugs is a findbugs plugin that can be used to scan code for common code security vulnerabilities. A plugin for 
+  The tool find-sec-bugs is a findbugs plugin that can be used to scan code for common code security vulnerabilities. A plugin for maven and jenkins is in the process of being tested. An issue that has arisen is the False Positive workflow. 
 
 
 ## Best Practice for Deployment of Opendaylight
 
 ### Proposed Threat Model
+There are currently 2 proposed models of deployment for OpenDaylight
