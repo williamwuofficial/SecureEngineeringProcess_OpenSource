@@ -19,7 +19,7 @@ The following guide will be focued towards secure development flow. For bug patc
 2. Bugzilla           (Issue Management)
 3. Sonar Qube         (Quality Control)
 
-## Issues to address adoption
+## Issues of adoption
 1. Scalability
 2. Ease of Integration
 
