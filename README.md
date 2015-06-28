@@ -1,6 +1,6 @@
 # Implementation of a Secure Engineering Process for Open Source Projects
 
-This intern project aims to address the security issues present in many open source projects. In particular, this document will be targeted towards the Open Source Software Defined Networking stack, OpenDaylight. 
+This intern project aims to address the security issues present in many open source projects. In particular, this document will be targeted towards the Open Source Software Defined Networking stack, OpenDaylight (ODL). 
 
 Please see the following [link](https://wiki.opendaylight.org/view/InternProjects:Main#Implement_a_secure_engineering_process_for_OpenDaylight) for more details on this project: 
 
@@ -11,7 +11,7 @@ The following guide will be focued towards secure development flow. For bug patc
 ### Common Practices in Secure Development
 1. Training for developers
 2. Specific testers and testing prodecures
-3. Continuous Integration testing and standards enforcement
+3. Continuous Integration (CI) testing and standards enforcement
 4. Best Practices documentation
 
 ## Current Development Lifecycle
@@ -25,11 +25,13 @@ The following guide will be focued towards secure development flow. For bug patc
 
 __General Issues of Open Source__
 
-Open source requires management of people from a variety of skill sets and timezones. Therefore, the main issues to adoption of security processes are scability and ease of adoption. Considering this, training and manual testing procedures are difficult to implement for an open source project. A CI (Continuous Integration) server such as jenkins would be able to perform code analysis via vulnerability scanners. 
+Open source projects require management of people from a wide variety of skill sets and timezones. Therefore, some of the main issues to adoption of security processes are scability and ease of adoption. Considering this, training and manual testing procedures are difficult to implement and scale for open source projects. CI servers are usually implemented as part of the build process, so tools such as static code analysis can be easily implmented but add a level of assurance. 
 
 ## Proposed Solution
 1. Dependency Management
     
+    
+
   The current proposed tool is OWASP_dependency_check, that has both a maven and jenkins plugin. Furthermore, the tool checks for vulnerable software against data from the NVD (National Vulnerability Database). In order to address False Positives, an xml file can be included to supress results in a scan. 
 
 2. Static Code Analysis
