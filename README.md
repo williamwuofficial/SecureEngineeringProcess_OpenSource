@@ -19,24 +19,30 @@ The following guide will be focued towards secure development flow. For bug patc
 2. Bugzilla           (Issue Management)
 3. Sonar Qube         (Quality Control)
 
-## Issues of adoption
+## Issues of process adoption
 1. Scalability
 2. Ease of Integration
 
 __General Issues of Open Source__
 
-Open source projects require management of people from a wide variety of skill sets and timezones. Therefore, some of the main issues to adoption of security processes are scability and ease of adoption. Considering this, training and manual testing procedures are difficult to implement and scale for open source projects. CI servers are usually implemented as part of the build process, so tools such as static code analysis can be easily implmented but add a level of assurance. 
+Open source projects require management of people from a wide variety of skill sets and timezones. Therefore, some of the main issues to adoption of security processes are scability and ease of adoption. Considering this, training and manual testing procedures are difficult to implement and scale for open source projects. CI servers are usually implemented as part of the build process, so tools such as static code analysis can be easily implmented, but add a level of assurance. 
 
 ## Proposed Solution
 1. Dependency Management
-    
-    
 
-  The current proposed tool is OWASP_dependency_check, that has both a maven and jenkins plugin. Furthermore, the tool checks for vulnerable software against data from the NVD (National Vulnerability Database). In order to address False Positives, an xml file can be included to supress results in a scan. 
+Large scale software projects nowadays involve large amount of code written outside the project itself. As such, vulnerabilites in dependant libararies can cause security issues if not updated quickly. Nested dependencies however, can make it difficult to trace the problematic dependnecy as the same libary may be used more than once with different versions. 
+
+  A proposed tool is [OWASP_dependency_check](https://wiki.jenkins-ci.org/display/JENKINS/OWASP+Dependency-Check+Plugin), that has both a maven and jenkins plugin. Furthermore, the tool checks for vulnerable software against data from the NVD (National Vulnerability Database). In order to address False Positives, an xml file can be specified to supress results in a scan. 
 
 2. Static Code Analysis
-    
-  The tool find-sec-bugs is a findbugs plugin that can be used to scan code for common code security vulnerabilities. A plugin for maven and jenkins is in the process of being tested. An issue that has arisen is the False Positive workflow. 
+
+Common security problems can often arise from simple mistakes in code and slip through a peer review system such as Gerrit. This issue can be addressed by a static analysis scanners that identify potentially problematic code. However, no tool is completely free of false postitives/negatives. A possible way that this could be addressed is a workflow that allows experienced developers to select which issues are false positives. These false issues are then stored and persistent across builds.  
+
+The tool find-sec-bugs is a findbugs plugin that can be used to scan code for common code security vulnerabilities. A plugin for maven and jenkins allow quick viewing of trends in the build process screen. As the findbugs tool is able to determine the line of code that the issues occurs, the false positive workflow will be able store the code, line number and issue.
+
+//pic for workflow
+
+// pic for vulnerability
 
 
 ## Best Practice for Deployment of Opendaylight
