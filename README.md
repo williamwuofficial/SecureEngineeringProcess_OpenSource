@@ -47,4 +47,4 @@ The tool [find-sec-bugs](https://github.com/h3xstream/find-sec-bugs) is a findbu
 ## Best Practice for Deployment of Opendaylight
 
 ### Proposed Threat Model
-There are currently 2 proposed models of deployment for OpenDaylight.... 
+There are currently 2 proposed models of deployment for OpenDaylight.... in an open network vulnerable to attacks and within a secure network. 
