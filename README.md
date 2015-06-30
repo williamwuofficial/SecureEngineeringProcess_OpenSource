@@ -44,6 +44,7 @@ The tool find-sec-bugs is a findbugs plugin that can be used to scan code for co
 
 // pic for vulnerability
 
+![alt tag](https://raw.github.com/willtmwu/SecureEngineeringProcess_OpenSource/master/pictures/Dependency_Findbugs.png)
 
 ## Best Practice for Deployment of Opendaylight
 
