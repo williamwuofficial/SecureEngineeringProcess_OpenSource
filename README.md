@@ -42,7 +42,7 @@ Common security problems can often arise from simple mistakes in code and slip t
 
 The tool [find-sec-bugs](https://github.com/h3xstream/find-sec-bugs) is a findbugs plugin that utilises static analysis to scan code for common code security vulnerabilities. A plugin for maven and jenkins allows for quick viewing of trends in the build screen. As the findbugs tool is able to determine the line of code that the issues occurs, the false positive workflow will be able store the code, line number and issue.
 
-
+![alt tag](https://raw.github.com/willtmwu/SecureEngineeringProcess_OpenSource/master/pictures/False_positive_workflow.png)
 
 ## Best Practice for Deployment of Opendaylight
 
