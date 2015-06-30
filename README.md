@@ -38,7 +38,7 @@ A proposed tool is [OWASP_dependency_check](https://wiki.jenkins-ci.org/display/
 
 2.Static Code Analysis
 
-Common security problems can often arise from simple mistakes in code and slip through a peer review system such as Gerrit. This issue can be addressed by scanners that identify potentially problematic code. However, no tool is completely free of false postitives/negatives. A possible way that this could be addressed is a workflow that allows experienced developers to select which issues are false positives. These false issues are then stored and persistent across builds.  
+Common security problems can often arise from simple mistakes in code and slip through a peer review system such as Gerrit. This issue can be addressed by scanners that identify potentially problematic code. However, no tool is completely free of false postitives/negatives. A possible way that this could be addressed is a workflow that allows experienced developers/operators to select which issues are false positives. These false issues are then stored and persistent across builds.  
 
 The tool [find-sec-bugs](https://github.com/h3xstream/find-sec-bugs) is a findbugs plugin that utilises static analysis to scan code for common code security vulnerabilities. A plugin for maven and jenkins allows for quick viewing of trends in the build screen. As the findbugs tool is able to determine the line of code that the issues occurs, the false positive workflow will be able store the code, line number and issue.
 
