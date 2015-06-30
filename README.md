@@ -9,8 +9,8 @@ Please see the following [link](https://wiki.opendaylight.org/view/InternProject
 The following guide will be focued towards secure development flow. For bug patching procedures please see, [link](https://wiki.opendaylight.org/view/Life_Cycle_of_a_Bug) and [instructions](https://wiki.opendaylight.org/view/TSC:Vulnerability_Management) for vulnerability management, ODL security response team.
 
 ### Common Practices in Secure Development
-1. Training for developers
-2. Specific testers and testing prodecures
+1. Training for developers/operators
+2. Specific testing prodecures and testers
 3. Continuous Integration (CI) testing and standards enforcement
 4. Best Practices documentation
 
@@ -30,23 +30,21 @@ Open source projects require management of people from a wide variety of skill s
 ## Proposed Solution
 1.Dependency Management
 
-Large scale software projects nowadays involve large amount of code written outside the project itself. As such, vulnerabilites in dependant libararies can cause security issues if not updated quickly. Nested dependencies however, can make it difficult to trace the problematic dependnecy as the same libary may be used more than once with different versions. 
+Large scale software projects nowadays involve large amount of code written outside the project itself. Therefore, vulnerabilites in dependant libararies can cause security issues if not updated quickly. Nested dependencies however, can make it difficult to trace the problematic dependency as the same libary may be used more than once, with different versions. 
 
 A proposed tool is [OWASP_dependency_check](https://wiki.jenkins-ci.org/display/JENKINS/OWASP+Dependency-Check+Plugin), that has both a maven and jenkins plugin. Furthermore, the tool checks for vulnerable software against data from the NVD (National Vulnerability Database). In order to address False Positives, an xml file can be specified to supress results in a scan. 
 
+![alt tag](https://raw.github.com/willtmwu/SecureEngineeringProcess_OpenSource/master/pictures/Dependency_Findbugs.png)
+
 2.Static Code Analysis
 
-Common security problems can often arise from simple mistakes in code and slip through a peer review system such as Gerrit. This issue can be addressed by a static analysis scanners that identify potentially problematic code. However, no tool is completely free of false postitives/negatives. A possible way that this could be addressed is a workflow that allows experienced developers to select which issues are false positives. These false issues are then stored and persistent across builds.  
+Common security problems can often arise from simple mistakes in code and slip through a peer review system such as Gerrit. This issue can be addressed by scanners that identify potentially problematic code. However, no tool is completely free of false postitives/negatives. A possible way that this could be addressed is a workflow that allows experienced developers to select which issues are false positives. These false issues are then stored and persistent across builds.  
 
-The tool find-sec-bugs is a findbugs plugin that can be used to scan code for common code security vulnerabilities. A plugin for maven and jenkins allow quick viewing of trends in the build process screen. As the findbugs tool is able to determine the line of code that the issues occurs, the false positive workflow will be able store the code, line number and issue.
+The tool [find-sec-bugs](https://github.com/h3xstream/find-sec-bugs) is a findbugs plugin that utilises static analysis to scan code for common code security vulnerabilities. A plugin for maven and jenkins allows for quick viewing of trends in the build screen. As the findbugs tool is able to determine the line of code that the issues occurs, the false positive workflow will be able store the code, line number and issue.
 
-//pic for workflow
-
-// pic for vulnerability
-
-![alt tag](https://raw.github.com/willtmwu/SecureEngineeringProcess_OpenSource/master/pictures/Dependency_Findbugs.png)
+![alt tag](https://raw.github.com/willtmwu/SecureEngineeringProcess_OpenSource/master/pictures/False_positive_workflow.png)
 
 ## Best Practice for Deployment of Opendaylight
 
 ### Proposed Threat Model
-There are currently 2 proposed models of deployment for OpenDaylight
+There are currently 2 proposed models of deployment for OpenDaylight.... 
