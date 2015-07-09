@@ -15,8 +15,9 @@ The following guide will be focued towards secure development flow. For bug patc
 4. Best Practices documentation
 
 ## Current Development Lifecycle
-1. Gerrit -> Jenkins  (Source Code Management)
-2. Bugzilla           (Issue Management)
+1. Gerrit             (Source Code Management)
+2. Jenkins            (CI Build Server)
+2. Bugzilla           (Bug Tracking)
 3. Sonar Qube         (Quality Control)
 
 ## Issues of process adoption
