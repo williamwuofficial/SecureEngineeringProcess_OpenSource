@@ -14,11 +14,11 @@ The jenkins findbugs plugin is dependent on the analysis-core plugin, which the 
 To allow for the auditing process to occur, the statistics must be able to be modified from the auditing view. This is done by obtaining a reference to a analysis-core.BuildResult object through the AbstractionBuildAction published beforehand. FileAnnotations (the warnings) are then removed and updated, however to ensure persistence between jenkins restarts they are serialised into the filesystem. 
 
 ##Future Works
-    ###In Progress
+###In Progress
 1. Moving the current auditing code into the parent (analysis-core) plugin, so that other dependant plugins can also benefit from the feature. 
 2. Documentation for this auditing feature. 
         
-    ###Planned
+###Planned
 1. Design and development of a FP (false positive) server system. 
 2. Extend the auditing feature futher to incorporated linking known issues to the bugzilla issue tracker. 
 
