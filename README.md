@@ -28,7 +28,7 @@ __General Issues of Open Source__
 
 Open source projects require management of people from a wide variety of skill sets and timezones. Therefore, some of the main issues to adoption of security processes are scability and ease of adoption. Considering this, training and manual testing procedures are difficult to implement and scale for open source projects. CI servers are usually implemented as part of the build process, so tools such as static code analysis can be easily implmented, but add a level of assurance. 
 
-## Proposed Solution
+## Proposed Integration of Tools
 1.Dependency Management
 
 Large scale software projects nowadays involve large amount of code written outside the project itself. Therefore, vulnerabilites in dependant libararies can cause security issues if not updated quickly. Nested dependencies however, can make it difficult to trace the problematic dependency as the same libary may be used more than once, with different versions. 
