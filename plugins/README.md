@@ -37,3 +37,4 @@ After post-build action has been added, the auditing table should be visible in 
 The table will show a list of the warnings for the build and/or the previously assigned False Positives from a previous build. These results will carry over to the graph in the next build. In the unconfirmed warnings table, select the checkbox for any warnings that are False Positives then press Update. 
 
 
+![alt tag](https://raw.github.com/willtmwu/SecureEngineeringProcess_OpenSource/master/plugins/pictures/findbugs-audit_configure.png)
