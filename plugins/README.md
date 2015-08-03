@@ -1,4 +1,4 @@
-#Jenkins Findbugs Plugin - Auditing Extension
+#Findbugs Jenkins Plugin - Auditing Extension
 
 ##Brief
 The Auditing Extension to the findbugs jenkins plugin adds functionality in the form of an auditing view. This would allow warnings found using the findbugs scanner to be identified as false positives and in subsequent builds the warning/s would not show as part of the published statistics. 
