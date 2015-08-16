@@ -28,6 +28,8 @@ To allow for the auditing process to occur, the statistics must be able to be mo
 ##Installation
 As the plugin code has yet to be merged to the main jenkins branch, the way to install the plugin is with the compiled .hpi file. As an administrator, go to 'Manage Plugins' and under the advanced tab upload the .hpi package.  
 
+![alt tag](https://raw.github.com/willtmwu/SecureEngineeringProcess_OpenSource/master/plugins/pictures/installation_process.png)
+
 ##Running
 To configure and run the plugin, on the job configuration page. Add a post-build action of "Publish Findbugs Warning Results" and then also add "Enable Findbugs Auditing". This will setup the auditing results to be correctly based off and filter the warning results. 
 
