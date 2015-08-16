@@ -47,7 +47,7 @@ The table will show a list of the warnings for the build and/or the previously a
 
 The following is a list of things to note and be aware of if using this plugin. 
 
-1. The threshold feature of findbugs warnings is not supported and compatible with the auditing functionality
-2. The user must have CONFIGURE or UPDATE permissions for the audit view to allow warnings to be marked FP
-3. After auditing has been performed, the trend graph will update in the next build
-4. Auditing for the warnings is restricted to the latest build only
+1. The threshold feature of findbugs warnings is not currently supported and compatible with the auditing functionality
+2. The user must have CONFIGURE or UPDATE permissions, for the audit view to allow warnings to be marked as FP
+3. After auditing has been performed, the trend graph will update in the next successful build
+4. Auditing the warnings is restricted to the latest build only
